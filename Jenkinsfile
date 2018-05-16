@@ -83,7 +83,7 @@ node {
     
     // deploy to a docker container mapped to port 3000
     // on windows use: bat 'docker-compose up -d --build'
-    sh 'docker-compose up -d --build'
+    sh 'sudo docker-compose up -d --build'
     
     notify 'Solitaire Deployed!'
 }
@@ -100,7 +100,7 @@ node {
 
 def notify(status){
     emailext (
-      to: "wesmdemos@gmail.com",
+      to: "naresh.print9@gmail.com",
       subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
       body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
         <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
