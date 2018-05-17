@@ -1,4 +1,4 @@
-stage 'CI-test'
+stage 'CI-test-initial'
 node {
 
     checkout scm
