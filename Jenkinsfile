@@ -91,14 +91,6 @@ node {
 
 
 
-
-
-
-
-
-
-
-
 def notify(status){
     emailext (
       to: "naresh.print9@gmail.com",
